@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简瑜 · 新媒体运营作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400&family=Gaegu:wght@400;700&family=ZCOOL+KuaiLe&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #fdf8ee;
+  --cream-warm: #f7eed8;
+  --cream-deep: #f0e3c4;
+  --paper: #faf3e3;
+  --wood-light: #e8d4a8;
+  --wood: #c89968;
+  --wood-deep: #8b6239;
+  --ink: #4a3a28;
+  --ink-soft: #7a6244;
+  --ink-mute: #a89070;
+
+  --leaf: #88b85f;
+  --leaf-deep: #5a8a3a;
+  --leaf-soft: #d8e8c5;
+  --sky: #a9d8e8;
+  --sky-deep: #6fb5cf;
+  --sky-soft: #d6ecf3;
+  --peach: #f5b8a0;
+  --peach-deep: #e88f72;
+  --peach-soft: #fbe1d4;
+  --berry: #d96b7a;
+  --berry-soft: #f5d4d9;
+  --sun: #f5cb5c;
+  --sun-deep: #e6a834;
+  --sun-soft: #fae9b8;
+  --lavender: #b8a4d4;
+  --lavender-soft: #e6dcf0;
+
+  --line: rgba(139, 98, 57, 0.15);
+  --line-strong: rgba(139, 98, 57, 0.3);
+  --shadow: 0 4px 20px rgba(139, 98, 57, 0.1);
+  --shadow-strong: 0 8px 30px rgba(139, 98, 57, 0.18);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'LXGW WenKai TC', 'Fraunces', serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  line-height: 1.7;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(245, 203, 92, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(169, 216, 232, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(136, 184, 95, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+/* ==================== Hero ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem 3rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Gaegu', cursive;
+  font-size: 1rem;
+  color: var(--wood-deep);
+  background: var(--paper);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1.5px solid var(--wood);
+  margin-bottom: 1.8rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-tag::before { content: '✦'; color: var(--sun-deep); }
+
+.hero-name {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.hero-name .accent {
+  display: inline-block;
+  background: linear-gradient(120deg, var(--peach-deep), var(--berry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.hero-name .accent::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--sun);
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+.hero-slogan {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.1rem;
+  color: var(--leaf-deep);
+  margin-bottom: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(136, 184, 95, 0.12);
+  border-left: 4px solid var(--leaf);
+  border-radius: 0 12px 12px 0;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  line-height: 2;
+}
+
+.hero-desc strong {
+  color: var(--berry);
+  font-weight: 700;
+  background: var(--berry-soft);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  background: var(--paper);
+  padding: 1.2rem 1.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--wood-light);
+  box-shadow: var(--shadow);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.stat-item:hover { transform: translateY(-4px); }
+
+/* 数据卡片用纯色而非渐变 */
+.stat-item:nth-child(1) {
+  background: var(--sun-soft);
+  border-color: var(--sun-deep);
+}
+.stat-item:nth-child(2) {
+  background: var(--peach-soft);
+  border-color: var(--peach-deep);
+}
+.stat-item:nth-child(3) {
+  background: var(--sky-soft);
+  border-color: var(--sky-deep);
+}
+
+.stat-num {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: block;
+}
+
+.stat-item:nth-child(1) .stat-num { color: var(--sun-deep); }
+.stat-item:nth-child(2) .stat-num { color: var(--peach-deep); }
+.stat-item:nth-child(3) .stat-num { color: var(--sky-deep); }
+
+.stat-label {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  display: block;
+}
+
+.hero-avatar-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.hero-avatar {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  border: 8px solid var(--paper);
+  box-shadow:
+    0 20px 50px rgba(139, 98, 57, 0.25),
+    0 0 0 2px var(--wood-light);
+  background: var(--cream-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-deco {
+  position: absolute;
+  font-size: 2.5rem;
+  z-index: 4;
+  background: var(--paper);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--wood-light);
+  box-shadow: var(--shadow);
+}
+
+.avatar-deco-1 { top: 30px; right: 30px; transform: rotate(-15deg); animation: bounce 3s ease-in-out infinite; }
+.avatar-deco-2 { bottom: 50px; left: 20px; transform: rotate(10deg); animation: bounce 3s ease-in-out infinite 0.5s; }
+.avatar-deco-3 { top: 50%; left: 0; animation: bounce 3s ease-in-out infinite 1s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.avatar-bg-circle {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky), var(--leaf));
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.avatar-bg-pattern {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  border: 2px dashed var(--wood);
+  opacity: 0.4;
+  z-index: 2;
+  animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+/* ==================== 通用 Section ==================== */
+section {
+  padding: 5rem 3rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Gaegu', cursive;
+  font-size: 1rem;
+  color: var(--wood-deep);
+  background: var(--paper);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1.5px solid var(--wood-light);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.section-title .en {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-mute);
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.section-side {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.95rem;
+  color: var(--ink-mute);
+  text-align: right;
+}
+
+.section-side::before { content: '✿ '; color: var(--berry); }
+
+/* ==================== 平台bar ==================== */
+.platform-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 1.2rem 1.8rem;
+  background: var(--paper);
+  border: 2px solid var(--wood-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.platform-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  background: var(--berry);
+  color: var(--cream);
+  flex-shrink: 0;
+}
+
+.platform-info { flex: 1; }
+
+.platform-name {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.platform-meta {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+  margin-top: 0.2rem;
+}
+
+/* ==================== 小红书 ==================== */
+.xhs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.xhs-card {
+  background: var(--paper);
+  border: 2px solid var(--wood-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.4s;
+}
+
+.xhs-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--berry);
+}
+
+.xhs-card-img {
+  width: 100%;
+  aspect-ratio: 9/16;
+  overflow: hidden;
+  background: var(--cream-warm);
+  display: block;
+}
+
+.xhs-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+  display: block;
+}
+
+.xhs-card:hover .xhs-card-img img {
+  transform: scale(1.05);
+}
+
+.xhs-card-info {
+  padding: 1.2rem;
+  background: var(--paper);
+}
+
+.xhs-card-label {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.85rem;
+  color: var(--berry);
+}
+
+/* ==================== 抖音单独大版块 ==================== */
+.douyin-section {
+  background: var(--cream-warm);
+  padding: 7rem 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  margin: 4rem 0;
+}
+
+.douyin-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.douyin-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.douyin-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.douyin-title .accent {
+  color: var(--berry);
+  position: relative;
+}
+
+.douyin-title .accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: var(--sun);
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 6px;
+}
+
+.douyin-desc {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 2;
+}
+
+.douyin-desc strong {
+  color: var(--berry);
+  font-weight: 700;
+  background: var(--berry-soft);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.douyin-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.dy-card {
+  position: relative;
+  border: 2px solid var(--wood-light);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  transition: all 0.4s;
+}
+
+.dy-card:nth-child(1) { transform: translateY(30px); }
+.dy-card:nth-child(2) { transform: translateY(0); }
+.dy-card:nth-child(3) { transform: translateY(50px); }
+.dy-card:nth-child(4) { transform: translateY(15px); }
+.dy-card:nth-child(5) { transform: translateY(60px); }
+
+.dy-card:hover {
+  border-color: var(--berry);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-8px) !important;
+}
+
+.dy-card-img {
+  aspect-ratio: 9/19;
+  overflow: hidden;
+  position: relative;
+  background: var(--cream-warm);
+  display: block;
+}
+
+.dy-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+  display: block;
+}
+
+.dy-card:hover .dy-card-img img {
+  transform: scale(1.08);
+}
+
+.dy-card-rank {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 0.9rem;
+  background: var(--paper);
+  padding: 0.25rem 0.7rem;
+  color: var(--berry);
+  border-radius: 20px;
+  border: 1.5px solid var(--berry);
+  z-index: 2;
+}
+
+.dy-card-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem 1rem;
+  background: linear-gradient(180deg, transparent, rgba(74, 58, 40, 0.85));
+}
+
+.dy-card-likes {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dy-card-likes::before { content: '❤️'; font-size: 0.9rem; }
+
+.dy-card-caption {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.8rem;
+  color: var(--cream-warm);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.douyin-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: var(--paper);
+  border-radius: 25px;
+  border: 2px dashed var(--wood);
+}
+
+.summary-item {
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.summary-item:hover { transform: translateY(-4px); }
+
+/* 数据汇总卡片用纯色 */
+.summary-item:nth-child(1) {
+  background: var(--berry-soft);
+}
+.summary-item:nth-child(2) {
+  background: var(--peach-soft);
+}
+.summary-item:nth-child(3) {
+  background: var(--sun-soft);
+}
+.summary-item:nth-child(4) {
+  background: var(--leaf-soft);
+}
+
+.summary-item:nth-child(1) .summary-num { color: var(--berry); }
+.summary-item:nth-child(2) .summary-num { color: var(--peach-deep); }
+.summary-item:nth-child(3) .summary-num { color: var(--sun-deep); }
+.summary-item:nth-child(4) .summary-num { color: var(--leaf-deep); }
+
+.summary-num {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.summary-label {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ==================== 数据分析 ==================== */
+.data-cases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.data-case {
+  border: 2px solid var(--wood-light);
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* 数据案例卡片用纯色 */
+.data-case:nth-child(1) {
+  background: var(--sun-soft);
+  border-color: var(--sun-deep);
+}
+
+.data-case:nth-child(2) {
+  background: var(--peach-soft);
+  border-color: var(--peach-deep);
+}
+
+.data-case:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.data-case-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.9rem;
+  background: var(--paper);
+  color: var(--wood-deep);
+  border: 1.5px solid var(--wood);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.data-case-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.data-case-section {
+  margin-bottom: 1.2rem;
+}
+
+.data-case-label {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.85rem;
+  color: var(--berry);
+  margin-bottom: 0.4rem;
+}
+
+.data-case-text {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.data-case-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed var(--line-strong);
+}
+
+.skill-pill {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1.5px solid var(--wood-light);
+  border-radius: 20px;
+}
+
+/* ==================== 技能 ==================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.skill-block {
+  padding: 2.5rem;
+  background: var(--paper);
+  border: 2px solid var(--wood-light);
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+}
+
+.skill-block-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-block-en {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: 1.8rem;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-bottom: 1.5px dashed var(--line);
+}
+
+.skill-row:last-child { border-bottom: none; }
+
+.skill-name {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.skill-bar {
+  width: 45%;
+  height: 8px;
+  background: var(--cream-warm);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--leaf), var(--sun));
+  border-radius: 4px;
+  position: relative;
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--leaf-deep);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  font-family: 'Gaegu', cursive;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--cream-warm);
+  color: var(--ink-soft);
+  border: 1.5px solid var(--wood-light);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.skill-tag:hover {
+  background: var(--leaf);
+  color: var(--cream);
+  border-color: var(--leaf-deep);
+  transform: translateY(-2px);
+}
+
+.skill-tag.acg {
+  background: var(--peach-soft);
+  border-color: var(--peach-deep);
+  color: var(--ink);
+}
+
+.skill-tag.acg:hover {
+  background: var(--berry);
+  color: var(--cream);
+  border-color: var(--berry);
+}
+
+.skill-tag.ai {
+  background: var(--lavender-soft);
+  border-color: var(--lavender);
+  color: var(--ink);
+}
+
+.skill-tag.ai:hover {
+  background: var(--lavender);
+  color: var(--cream);
+  border-color: var(--lavender);
+}
+
+/* AI能力说明卡片 */
+.ai-highlight {
+  background: var(--lavender-soft);
+  border: 2px solid var(--lavender);
+  padding: 1.5rem;
+  border-radius: 18px;
+  margin-top: 1.5rem;
+}
+
+.ai-highlight-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ai-highlight-text {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.ai-highlight-text strong {
+  color: var(--wood-deep);
+  font-weight: 700;
+  background: var(--paper);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* ==================== 联系方式 ==================== */
+.contact-section {
+  padding: 5rem 3rem 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 3px solid var(--wood);
+  border-radius: 35px;
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-strong);
+}
+
+.contact-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(90deg,
+    var(--berry), var(--peach), var(--sun), var(--leaf), var(--sky), var(--lavender));
+}
+
+.contact-deco-leaf {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.15;
+}
+.contact-deco-leaf.left { top: 20%; left: 5%; transform: rotate(-20deg); }
+.contact-deco-leaf.right { bottom: 15%; right: 5%; transform: rotate(20deg); }
+
+.contact-tag {
+  font-family: 'Gaegu', cursive;
+  font-size: 1rem;
+  color: var(--wood-deep);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-tag::before { content: '✿'; color: var(--berry); }
+
+.contact-desc {
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.8rem;
+  background: var(--cream-warm);
+  border: 2px solid var(--wood-light);
+  border-radius: 50px;
+  font-family: 'Gaegu', cursive;
+  font-size: 1rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contact-item:hover {
+  border-color: var(--berry);
+  background: var(--berry-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.contact-item .emoji { font-size: 1.2rem; }
+
+.contact-item strong {
+  color: var(--ink);
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+footer {
+  padding: 2rem 3rem;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+  position: relative;
+  z-index: 2;
+}
+
+footer .heart { color: var(--berry); }
+
+/* ==================== 响应式 ==================== */
+@media (max-width: 1024px) {
+  .hero { padding: 4rem 2rem 3rem; }
+  .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-avatar-wrap { height: 400px; }
+  .hero-avatar { width: 280px; height: 280px; }
+  .avatar-bg-circle { width: 360px; height: 360px; }
+  .avatar-bg-pattern { width: 320px; height: 320px; }
+  .douyin-grid { grid-template-columns: repeat(3, 1fr); }
+  .dy-card:nth-child(n) { transform: translateY(0); }
+  .douyin-summary { grid-template-columns: repeat(2, 1fr); }
+  .douyin-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .data-cases { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .xhs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  section { padding: 3.5rem 1.5rem; }
+  .hero { padding: 3rem 1.5rem 3rem; }
+  .douyin-inner { padding: 0 1.5rem; }
+  .douyin-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .douyin-summary { grid-template-columns: 1fr 1fr; padding: 1.5rem; gap: 1rem; }
+  .xhs-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; }
+  .stat-item { min-width: 140px; }
+  .contact-wrap { padding: 3rem 1.5rem; }
+  .contact-list { flex-direction: column; gap: 0.8rem; }
+  .summary-num { font-size: 1.6rem; }
+  .platform-bar { flex-wrap: wrap; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Portfolio · 2026</div>
+      <h1 class="hero-name">你好呀，<br>我是<span class="accent">简瑜</span></h1>
+      <div class="hero-slogan">🎮 游戏新媒体运营 · 内容创作者</div>
+      <p class="hero-desc">
+        港教大数字人文在读，3段新媒体&内容运营实习经历。<br>
+        对<strong>数据</strong>不脱敏，每天盯着点赞、播放、粉丝增长是日常。<br>
+        重度<strong>ACG冲浪选手</strong>，微博/抖音/B站全平台在线，<br>
+        热梗反应速度0.5秒 👾
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">段实习经历</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">30W+</span>
+          <span class="stat-label">活动曝光</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">10W+</span>
+          <span class="stat-label">单条最高赞</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-avatar-wrap">
+      <div class="avatar-bg-circle"></div>
+      <div class="avatar-bg-pattern"></div>
+      <div class="hero-avatar">
+        <img src="images/avatar.jpg" alt="简瑜">
+      </div>
+      <div class="avatar-deco avatar-deco-1">🌸</div>
+      <div class="avatar-deco avatar-deco-2">🍒</div>
+      <div class="avatar-deco avatar-deco-3">🎮</div>
+    </div>
+  </div>
+</section>
+
+<!-- 小红书 -->
+<section id="xhs" class="reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-num">📕 01 / Content</div>
+      <h2 class="section-title">小红书内容运营<span class="en">— xiaohongshu daily ops</span></h2>
+    </div>
+    <div class="section-side">官方账号日常运营</div>
+  </div>
+  <div class="platform-bar">
+    <div class="platform-icon">小</div>
+    <div class="platform-info">
+      <div class="platform-name">剑网3 · 小红书官方账号</div>
+      <div class="platform-meta">日常发布 / 活动节点 / 版本更新 / 节气热点</div>
+    </div>
+  </div>
+  <div class="xhs-grid">
+    <div class="xhs-card">
+      <div class="xhs-card-img"><img src="images/xhs1.jpg" alt="小红书内容"></div>
+    </div>
+    <div class="xhs-card">
+      <div class="xhs-card-img"><img src="images/xhs2.jpg" alt="小红书内容"></div>
+    </div>
+    <div class="xhs-card">
+      <div class="xhs-card-img"><img src="images/xhs3.jpg" alt="小红书内容"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 抖音 -->
+<section id="douyin" class="douyin-section reveal">
+  <div class="douyin-inner">
+    <div class="douyin-header">
+      <div>
+        <div class="section-num" style="margin-bottom: 1.5rem;">🎬 02 / Short Video</div>
+        <h2 class="douyin-title">抖音<span class="accent">热点</span><br>短视频独立产出</h2>
+      </div>
+      <div>
+        <p class="douyin-desc">
+          检索<strong>近期抖音热点</strong>，规划日常内容方向。<br>
+          独立完成<strong>选题 / 写脚本 / 剪辑 / 配文</strong>全流程产出。<br>
+          多条视频<strong>破万点赞</strong>，最高单条❤️ 3.2万 + 转发 6974。
+        </p>
+      </div>
+    </div>
+
+    <div class="douyin-grid">
+      <div class="dy-card">
+        <div class="dy-card-img">
+          <div class="dy-card-rank">#02</div>
+          <img src="images/dy3.jpg" alt="抖音内容">
+          <div class="dy-card-stats">
+            <div class="dy-card-likes">2.6W</div>
+            <div class="dy-card-caption">公主请... #剑网3激励计划</div>
+          </div>
+        </div>
+      </div>
+      <div class="dy-card">
+        <div class="dy-card-img">
+          <div class="dy-card-rank">#01</div>
+          <img src="images/dy4.jpg" alt="抖音内容">
+          <div class="dy-card-stats">
+            <div class="dy-card-likes">3.2W</div>
+            <div class="dy-card-caption">哥哥好帅（踢走其他乘黄）（跑到面前摇尾巴）</div>
+          </div>
+        </div>
+      </div>
+      <div class="dy-card">
+        <div class="dy-card-img">
+          <div class="dy-card-rank">#03</div>
+          <img src="images/dy1.jpg" alt="抖音内容">
+          <div class="dy-card-stats">
+            <div class="dy-card-likes">1.9W</div>
+            <div class="dy-card-caption">每日一遍 清心咒（"∀")这不得看一百遍！！</div>
+          </div>
+        </div>
+      </div>
+      <div class="dy-card">
+        <div class="dy-card-img">
+          <div class="dy-card-rank">#04</div>
+          <img src="images/dy5.jpg" alt="抖音内容">
+          <div class="dy-card-stats">
+            <div class="dy-card-likes">1.3W</div>
+            <div class="dy-card-caption">想听姐姐说爱我 #你说爱我尊嘟假嘟 #五毒</div>
+          </div>
+        </div>
+      </div>
+      <div class="dy-card">
+        <div class="dy-card-img">
+          <div class="dy-card-rank">#05</div>
+          <img src="images/dy2.jpg" alt="抖音内容">
+          <div class="dy-card-stats">
+            <div class="dy-card-likes">6029</div>
+            <div class="dy-card-caption">（叼着玫瑰出现）姐姐晚上好呀</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="douyin-summary">
+      <div class="summary-item">
+        <div class="summary-num">10W+</div>
+        <div class="summary-label">5条视频累计赞</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num">3.2W</div>
+        <div class="summary-label">单条最高点赞</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num">7K+</div>
+        <div class="summary-label">单条最高转发</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num">100%</div>
+        <div class="summary-label">独立产出</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据分析 -->
+<section id="data" class="reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-num">📊 03 / Data</div>
+      <h2 class="section-title">数据分析与舆情<span class="en">— data & public opinion</span></h2>
+    </div>
+    <div class="section-side">数据敏感度 + 危机响应</div>
+  </div>
+  <div class="data-cases">
+    <div class="data-case">
+      <div class="data-case-tag">📈 Case 01 · 数据管理</div>
+      <h3 class="data-case-title">游戏二创激励活动<br>数据登记与热度分析</h3>
+      <div class="data-case-section">
+        <div class="data-case-label">🎯 背景</div>
+        <p class="data-case-text">游戏二创激励活动期间，需处理大量参赛稿件，跨平台分散难管理。</p>
+      </div>
+      <div class="data-case-section">
+        <div class="data-case-label">🛠️ 工作内容</div>
+        <p class="data-case-text">登记每份参赛稿件的链接、内容分类、发布平台等关键信息，搭建结构化数据表；持续追踪并分析各平台热度数据，识别表现突出的优质内容。</p>
+      </div>
+      <div class="data-case-section">
+        <div class="data-case-label">✨ 输出价值</div>
+        <p class="data-case-text">每日/每周数据汇总表 · 高热度内容热点推荐表 · 为运营策略调整提供数据支撑。</p>
+      </div>
+      <div class="data-case-skills">
+        <span class="skill-pill">Excel</span>
+        <span class="skill-pill">数据登记</span>
+        <span class="skill-pill">多平台监测</span>
+        <span class="skill-pill">热度分析</span>
+      </div>
+    </div>
+
+    <div class="data-case">
+      <div class="data-case-tag">🚨 Case 02 · 舆情危机</div>
+      <h3 class="data-case-title">新商城时装涉及抄袭事件<br>多平台舆情监控</h3>
+      <div class="data-case-section">
+        <div class="data-case-label">🎯 背景</div>
+        <p class="data-case-text">新商城时装上线前被偷跑曝光，玩家社区出现"涉嫌抄袭"质疑声，舆情发酵迅速。</p>
+      </div>
+      <div class="data-case-section">
+        <div class="data-case-label">🛠️ 工作内容</div>
+        <p class="data-case-text">第一时间在微博/小红书/抖音/贴吧/NGA等多个平台搜集舆情帖子并持续监控其热度动态；汇总舆情走向、关键意见，向项目组汇报。</p>
+      </div>
+      <div class="data-case-section">
+        <div class="data-case-label">✨ 能力体现</div>
+        <p class="data-case-text">快速反应 · 多平台信息整合 · 危机识别 · 协助团队及时掌握舆情走向，推动问题解决。</p>
+      </div>
+      <div class="data-case-skills">
+        <span class="skill-pill">舆情监控</span>
+        <span class="skill-pill">危机响应</span>
+        <span class="skill-pill">多平台采集</span>
+        <span class="skill-pill">向上汇报</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 技能 -->
+<section id="skills" class="reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-num">🛠️ 04 / Skills</div>
+      <h2 class="section-title">技能矩阵<span class="en">— skill matrix</span></h2>
+    </div>
+    <div class="section-side">工具 + AI能力 + 软实力</div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-block">
+      <h3 class="skill-block-title">⚡ 硬技能</h3>
+      <div class="skill-block-en">// hard skills</div>
+      <div class="skill-row">
+        <span class="skill-name">Microsoft Office 全家桶</span>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">剪映短视频剪辑</span>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Photoshop 视觉设计</span>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Canva 海报排版</span>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">秀米 / 135 推文排版</span>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+      </div>
+
+      <div class="ai-highlight">
+        <div class="ai-highlight-title">🤖 AI 能力加成</div>
+        <p class="ai-highlight-text">
+          具备 <strong>Vibe Coding</strong> 能力，熟练使用 VS Code + Codex 等 AI 编程工具完成开发任务；
+          能借助 <strong>大模型 LLM</strong> 完成数据清洗、文本处理、内容生成等工作流；
+          具备优秀的<strong>提示词工程</strong>能力，能通过结构化 Prompt 精准调教 AI，输出符合业务需求的结果。
+        </p>
+      </div>
+    </div>
+    <div class="skill-block">
+      <h3 class="skill-block-title">🌟 软实力</h3>
+      <div class="skill-block-en">// soft skills</div>
+      <div class="skill-tags">
+        <span class="skill-tag">网感强</span>
+        <span class="skill-tag">玩梗灵敏</span>
+        <span class="skill-tag">文风切换</span>
+        <span class="skill-tag">数据敏感</span>
+        <span class="skill-tag">多平台运营</span>
+        <span class="skill-tag">活动策划</span>
+        <span class="skill-tag">KOC对接</span>
+        <span class="skill-tag">现场执行</span>
+        <span class="skill-tag">危机响应</span>
+        <span class="skill-tag">舆情监控</span>
+        <span class="skill-tag">脚本撰写</span>
+        <span class="skill-tag">用户社群</span>
+      </div>
+
+      <div class="skill-block-en" style="margin-top: 2rem;">// AI tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag ai">Vibe Coding</span>
+        <span class="skill-tag ai">VS Code + Codex</span>
+        <span class="skill-tag ai">LLM 数据清洗</span>
+        <span class="skill-tag ai">提示词工程</span>
+        <span class="skill-tag ai">结构化 Prompt</span>
+        <span class="skill-tag ai">AI 工作流</span>
+      </div>
+
+      <div class="skill-block-en" style="margin-top: 2rem;">// ACG status</div>
+      <div class="skill-tags">
+        <span class="skill-tag acg">微博 高强度冲浪</span>
+        <span class="skill-tag acg">抖音 日常蹲点</span>
+        <span class="skill-tag acg">B站 老用户</span>
+        <span class="skill-tag acg">游戏发烧友</span>
+        <span class="skill-tag acg">动漫爱好者</span>
+        <span class="skill-tag acg">热梗反应0.5s</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系方式 -->
+<section id="contact" class="contact-section reveal">
+  <div class="contact-wrap">
+    <div class="contact-deco-leaf left">🌿</div>
+    <div class="contact-deco-leaf right">🌸</div>
+    <div class="contact-tag">05 / Get in touch</div>
+    <p class="contact-desc">如果你觉得我合适，欢迎联系 ✦</p>
+    <div class="contact-list">
+      <a href="mailto:norajian@163.com" class="contact-item">
+        <span class="emoji">📮</span>
+        <span>邮箱<strong>norajian@163.com</strong></span>
+      </a>
+      <div class="contact-item">
+        <span class="emoji">💬</span>
+        <span>微信<strong>LoveeJayu-</strong></span>
+      </div>
+      <div class="contact-item">
+        <span class="emoji">📱</span>
+        <span>电话<strong>136 2838 2119</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 简瑜 Portfolio · Made with <span class="heart">♥</span> for game content ops
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
